@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161220000156) do
+ActiveRecord::Schema.define(version: 20161220103530) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,4 +22,15 @@ ActiveRecord::Schema.define(version: 20161220000156) do
     t.index ["name"], name: "index_groups_on_name", unique: true, using: :btree
   end
 
+  create_table "places", force: :cascade do |t|
+    t.string   "name",        null: false
+    t.string   "description"
+    t.integer  "group_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["group_id", "name"], name: "index_places_on_group_id_and_name", unique: true, using: :btree
+    t.index ["group_id"], name: "index_places_on_group_id", using: :btree
+  end
+
+  add_foreign_key "places", "groups"
 end

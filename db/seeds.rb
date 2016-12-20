@@ -5,9 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Group.create([
-  { name: 'Ben Franklin Labs' },
-  { name: 'Snip Salon Software' },
-  { name: 'GloboChem' },
-  { name: 'TechCorp' },
+groups = Group.create([
+  { name: 'Neemu+Chaordic' },
+  { name: 'LinxGroup' },
+  { name: 'Juqueti' }
+])
+
+firstGroup = groups.first
+
+places = Place.create([
+  { name: 'Almofada das poltronas da sala de reunião', group: firstGroup },
+  { name: 'Caneca gigante do Oriani', group: firstGroup },
+  { name: 'Nerf do Gabriel', group: firstGroup },
+  { name: 'Puff', group: firstGroup },
+  { name: 'Tequila José Cuervo', group: firstGroup }
 ])
