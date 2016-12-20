@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Group.create([
+  { name: 'Ben Franklin Labs' },
+  { name: 'Snip Salon Software' },
+  { name: 'GloboChem' },
+  { name: 'TechCorp' },
+])
