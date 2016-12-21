@@ -10,7 +10,8 @@ class GroupsController < ApplicationController
 
   # GET /groups/1
   def show
-    render json: @group
+    render json: @group, :include => { :weapons => { :only => [ :name ] },
+                                       :places => { :only => [ :name ] } }
   end
 
   # POST /groups
