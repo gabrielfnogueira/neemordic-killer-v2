@@ -14,6 +14,14 @@ groups = Group.create([
 firstGroup = groups.first
 
 places = Place.create([
+  { name: 'Bistrôs', group: firstGroup },
+  { name: 'Frente ao ponto', group: firstGroup },
+  { name: 'Puffs', group: firstGroup },
+  { name: 'Sala ADM', group: firstGroup },
+  { name: 'Salinha da amizade', group: firstGroup }
+])
+
+weapons = Weapon.create([
   { name: 'Almofada das poltronas da sala de reunião', group: firstGroup },
   { name: 'Caneca gigante do Oriani', group: firstGroup },
   { name: 'Nerf do Gabriel', group: firstGroup },
@@ -28,4 +36,10 @@ places2 = Place.create([
   { name: 'linx ponto', group: secondGroup },
   { name: 'linx cozinha', group: secondGroup },
   { name: 'linx banheiro', group: secondGroup }
+])
+
+weapons2 = Weapon.create([
+  { name: 'linx badge', group: secondGroup },
+  { name: 'linx cup', group: secondGroup },
+  { name: 'linx book', group: secondGroup }
 ])
