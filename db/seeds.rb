@@ -20,3 +20,12 @@ places = Place.create([
   { name: 'Puff', group: firstGroup },
   { name: 'Tequila José Cuervo', group: firstGroup }
 ])
+
+secondGroup = groups.second
+
+places2 = Place.create([
+  { name: 'linx sala', group: secondGroup },
+  { name: 'linx ponto', group: secondGroup },
+  { name: 'linx cozinha', group: secondGroup },
+  { name: 'linx banheiro', group: secondGroup }
+])

@@ -1,9 +1,10 @@
 class PlacesController < ApplicationController
+  before_action :set_group, only: [:index]
   before_action :set_place, only: [:show, :update, :destroy]
 
   # GET /places
   def index
-    @places = Place.all
+    @places = @group.places
 
     render json: @places
   end
@@ -42,6 +43,10 @@ class PlacesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_place
       @place = Place.find(params[:id])
+    end
+
+    def set_group
+      @group = Group.find(params[:group_id])
     end
 
     # Only allow a trusted parameter "white list" through.
