@@ -3,5 +3,7 @@ export class GroupsController {
     'ngInject';
 
     $scope.groups = GroupsFactory.groups;
+
+    $scope.test = utils.removeAccents('coração de niños é avô');
   }
 }
