@@ -6,8 +6,13 @@ export class GroupsFactory {
       groups: [],
       getAll: function() {
         let that = this;
-        return $http.get('/api/groups.json').success(function(data){
+        return $http.get('/api/groups').success(function(data){
           angular.copy(data, that.groups);
+        });
+      },
+      get: function(id) {
+        return $http.get('/api/groups/' + id + '').then(function(res){
+          return res.data;
         });
       }
     };

@@ -6,6 +6,7 @@ import { runBlock } from './index.run';
 import { MainController } from './main/main.controller';
 import { AboutController } from './main/about.controller';
 import { GroupsController } from './components/groups.controller';
+import { GroupsViewController } from './components/groupsView.controller';
 import { GroupsFactory } from './components/groups.factory';
 import { GithubContributorService } from '../app/components/githubContributor/githubContributor.service';
 import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
@@ -23,6 +24,7 @@ angular.module('neemordicKiller', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanit
   .controller('MainController', MainController)
   .controller('AboutController', AboutController)
   .controller('GroupsController', GroupsController)
+  .controller('GroupsViewController', GroupsViewController)
   .service('GroupsFactory', GroupsFactory)
   .directive('acmeNavbar', NavbarDirective)
   .directive('acmeMalarkey', MalarkeyDirective);

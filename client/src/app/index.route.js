@@ -23,6 +23,17 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
                 GroupsFactory.getAll();
             }]
         }
+    })
+    .state('group', {
+      url: '/groups/{id}',
+      templateUrl: 'app/components/groupsView.html',
+      controller: 'GroupsViewController',
+      controllerAs: 'groupsViewCtrl',
+        resolve: {
+            group: ['$stateParams', 'GroupsFactory', function($stateParams, GroupsFactory){
+                return GroupsFactory.get($stateParams.id);
+            }]
+        }
     });
 
   $urlRouterProvider.otherwise('/');
